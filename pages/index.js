@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import styles from "../styles/Home.module.css";
 
-const url = "http://localhost:3000/api/task";
+const url = "https://todo-nextjs2023/api/task";
 
 export default function Home(props) {
   const [tasks, setTasks] = useState(props.tasks);

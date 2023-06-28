@@ -1,12 +1,11 @@
 import mongoose from "mongoose";
+import { errorToJSON } from "next/dist/server/render";
 
 const DB_URL =
   "mongodb+srv://admin:admin@cluster0.rfxyxuu.mongodb.net/?retryWrites=true&w=majority";
 
 if (!DB_URL) {
-  throw new Error(
-    "Please define the DB_URL environment variable inside .env.local"
-  );
+  throw new Error(errorToJSON("DB ERROR"));
 }
 
 let cached = global.mongoose;

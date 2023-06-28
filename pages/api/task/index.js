@@ -1,7 +1,7 @@
 import Task from "../../../models/Task";
 import dbConnect from "../../../utils/dbConnect";
 
-export default TaskHandler = async (req, res) => {
+const TaskHandler = async (req, res) => {
   const { method } = req;
 
   // Connect to database
@@ -30,3 +30,5 @@ export default TaskHandler = async (req, res) => {
     }
   }
 };
+
+export default TaskHandler;

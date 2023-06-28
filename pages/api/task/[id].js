@@ -1,7 +1,7 @@
 import Task from "../../../models/Task";
 import dbConnect from "../../../utils/dbConnect";
 
-export default Handler = async (req, res) => {
+const Handler = async (req, res) => {
   const { method } = req;
   const { id } = req.query;
 
@@ -35,3 +35,4 @@ export default Handler = async (req, res) => {
     }
   }
 };
+export default Handler;
